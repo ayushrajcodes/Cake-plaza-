@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cake Plaza | Freshly Baked Delights</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              rose: '#f272b6',
+              gold: '#e1d048',
+              cream: '#fff8f0',
+              dark: '#2d2b27'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-cream text-brand-dark font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <div class="flex-shrink-0">
+          <span class="font-serif text-3xl font-bold text-brand-rose">Cake Plaza</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="#home" class="hover:text-brand-rose transition-colors">Home</a>
+          <a href="#menu" class="hover:text-brand-rose transition-colors">Menu</a>
+          <a href="#order" class="hover:text-brand-rose transition-colors">Order Now</a>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-btn" class="p-2 rounded-md text-gray-600 hover:text-brand-rose focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-4 space-y-2">
+      <a href="#home" class="block py-2 text-gray-700 hover:text-brand-rose">Home</a>
+      <a href="#menu" class="block py-2 text-gray-700 hover:text-brand-rose">Menu</a>
+      <a href="#order" class="block py-2 text-gray-700 hover:text-brand-rose">Order Now</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative py-20 lg:py-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="font-serif text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+          Baking Joy into Every Celebration
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 mb-8 font-light">
+          Handcrafted artisanal cakes made with premium ingredients and endless love. Order online for custom designs and instant local delivery.
+        </p>
+        <a href="#order" class="inline-block bg-brand-rose text-white font-medium px-8 py-4 rounded-full shadow-lg hover:bg-rose-500 transition-all transform hover:-translate-y-0.5">
+          Order Your Cake Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Highlights -->
+  <section id="menu" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="font-serif text-4xl font-bold text-gray-900">Featured Creations</h2>
+        <p class="text-gray-500 mt-2">Discover our most loved cake varieties</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Cake Item 1 -->
+        <div class="rounded-2xl bg-brand-cream p-6 text-center hover:shadow-xl transition-shadow border border-rose-100">
+          <div class="h-48 bg-rose-200 rounded-xl mb-4 flex items-center justify-center text-brand-rose text-4xl font-serif">
+            🍫
+          </div>
+          <h3 class="font-serif text-2xl font-bold mb-2">Chocolate Truffle</h3>
+          <p class="text-gray-600 text-sm mb-4">Rich dark chocolate ganache layered with moist cocoa sponge.</p>
+          <span class="text-brand-rose font-bold text-lg">From ₹599</span>
+        </div>
+
+        <!-- Cake Item 2 -->
+        <div class="rounded-2xl bg-brand-cream p-6 text-center hover:shadow-xl transition-shadow border border-rose-100">
+          <div class="h-48 bg-rose-200 rounded-xl mb-4 flex items-center justify-center text-brand-rose text-4xl font-serif">
+            🔴
+          </div>
+          <h3 class="font-serif text-2xl font-bold mb-2">Red Velvet Heart</h3>
+          <p class="text-gray-600 text-sm mb-4">Classic red velvet sponge paired with smooth cream cheese frosting.</p>
+          <span class="text-brand-rose font-bold text-lg">From ₹699</span>
+        </div>
+
+        <!-- Cake Item 3 -->
+        <div class="rounded-2xl bg-brand-cream p-6 text-center hover:shadow-xl transition-shadow border border-rose-100">
+          <div class="h-48 bg-rose-200 rounded-xl mb-4 flex items-center justify-center text-brand-rose text-4xl font-serif">
+            🍓
+          </div>
+          <h3 class="font-serif text-2xl font-bold mb-2">Fresh Fruit Gateau</h3>
+          <p class="text-gray-600 text-sm mb-4">Light vanilla sponge topped with seasonal fresh fruits and whipped cream.</p>
+          <span class="text-brand-rose font-bold text-lg">From ₹649</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form -->
+  <section id="order" class="py-16 bg-brand-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-8 shadow-xl border border-rose-100">
+        <h2 class="font-serif text-3xl font-bold text-center mb-6">Place Your Order</h2>
+        <form id="cake-form" class="space-y-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+            <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-rose focus:outline-none" placeholder="Enter your full name">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+            <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-rose focus:outline-none" placeholder="Enter phone number">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Select Cake</label>
+            <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-rose focus:outline-none">
+              <option>Chocolate Truffle</option>
+              <option>Red Velvet Heart</option>
+              <option>Fresh Fruit Gateau</option>
+              <option>Custom Theme Cake</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Quantity / Weight</label>
+            <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-rose focus:outline-none">
+              <option>0.5 kg</option>
+              <option>1.0 kg</option>
+              <option>2.0 kg</option>
+              <option>Custom / Multi-tier</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full bg-brand-rose text-white font-medium py-4 rounded-xl shadow-md hover:bg-rose-500 transition-colors">
+            Confirm Order
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-8 border-t border-gray-100 text-center">
+    <p class="text-sm text-gray-500">&copy; 2026 Cake Plaza. All rights reserved.</p>
+  </footer>
+
+  <!-- Clean JavaScript -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    const cakeForm = document.getElementById('cake-form');
+    if (cakeForm) {
+      cakeForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for ordering from Cake Plaza! We will reach out to confirm your order shortly.');
+        cakeForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>
